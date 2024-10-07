@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+    @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center hidden;
+}
+
+.input-field {
+    label {
+        @apply text-white font-semibold;
+    }
+}
+
+.heading {
+    @apply text-blue-700 font-bold pt-4 text-lg pl-4;
+}

@@ -1,8 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Supplier_Form from "./components/Supplier_Form.jsx";
+import Navbar from "./components/Navbar.jsx";
+import SupplierList from "./components/SupplierList.jsx";
+import SupplierSearch from "./components/SupplierSearch.jsx";
+import ProductsList from "./components/ProductsList.jsx";
 
+// List of all the routes in the application
 const routes = [
-  { path: '/create-supplier', element: <h1>Create Supplier Form</h1> },
-  { path: '/home', element: <h1>Home</h1> },
+    {path: '/create-supplier', element: <Supplier_Form />},
+    {path: '/view-suppliers', element: <SupplierList />},
+    {path: '/view-products', element: <ProductsList />},
+    {path: '/search-supplier', element: <SupplierSearch />},
 ];
 
 const generateRoutes = () => {
@@ -17,8 +25,7 @@ function App() {
   return (
     <div className="bg-gray-200">
       <Router>
-          {/* <Navigation /> */}
-          <h1>Navbar</h1>
+          <Navbar/>
           <Routes>
               {generateRoutes()}
           </Routes>
